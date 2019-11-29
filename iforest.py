@@ -204,6 +204,7 @@ def path_length_tree(x, t,e):
         e = e+ c(t.size)
         return e
     else:
+        #  b = t.split_by
         a = t.split_by
         if x[a] < t.split_value :
             return path_length_tree(x, t.left, e+1)
