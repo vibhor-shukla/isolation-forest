@@ -49,6 +49,7 @@ def plot_anomalies(X, y, sample_size=256, n_trees = 100, desired_TPR=None, perce
     print(f"Proportion anomalies/normal = {len(anomalies)}/{len(normal)} = {(len(anomalies)/len(normal))*100:.1f}%")
     print(f"F1 score {F1:.4f}, avg PR {PR:.4f}")
 
+    #  fig, axes = plt.subplots(2, 1, sharex=True)
     fig, axes = plt.subplots(2, 1, sharex=True)
     counts0, binlocs0, _ = axes[0].hist(normal, color='#c7e9b4', bins=bins)
     counts1, binlocs1, _ = axes[1].hist(anomalies, color='#fee090', bins=bins)
